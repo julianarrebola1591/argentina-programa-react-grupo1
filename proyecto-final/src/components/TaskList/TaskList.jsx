@@ -11,7 +11,7 @@ const TaskList = ({tasks, task, deleteTask}) => {
             key={task.id}
             name={task.taskName}
             isDone={task.taskDone}
-            delete={deleteTask}
+            deleteTask={deleteTask}
           />
         ))}
       </div>
