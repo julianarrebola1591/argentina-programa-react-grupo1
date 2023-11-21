@@ -13,6 +13,9 @@ body{
   display: flex ;
   flex-direction: column;
   align-items: center;
+  padding: 14px;
+  background-color: #222;
+  border-radius: 12px;
 }
 
 .tasks-container{
