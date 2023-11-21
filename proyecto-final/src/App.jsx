@@ -1,28 +1,31 @@
+/* eslint-disable react/jsx-key */
+import { useState } from 'react'
 import './App.css'
+import { TaskList, TaskForm, TaskItem } from './components'
 
 function App() {
 
-  const TaskItem = () => {
-    return (
-      <h2>Tarea</h2>
-    )
-  }
-
-  const TaskList = () => {
-    return (
-      <div>
-        <h1>Lista de Tareas</h1>
-        <input type="text" />
-        <button></button>
-        <TaskItem />
-      </div>
-    )
-  }
+  const [tasks, setTasks] = useState([])
 
   return (
-    <>
-      <TaskList />
-    </>
+    <section id='task-list'>
+      <TaskList>
+      <TaskForm 
+        tasks={tasks}
+        setTasks={setTasks}
+      />
+      <div className='tasks-container'>
+        {tasks.map(task =>(
+          <TaskItem 
+            id={task.id}
+            key={task.id}
+            name={task.taskName}
+            isDone={task.taskDone}
+          />
+        ))}
+      </div>
+      </TaskList>
+    </section>
   )
 }
 

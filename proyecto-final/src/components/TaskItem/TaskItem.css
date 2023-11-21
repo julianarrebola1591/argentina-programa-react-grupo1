@@ -1,0 +1,13 @@
+.task-container{
+  display: grid;
+  grid-template-columns: auto 226px auto ;
+  gap: 8px;
+}
+
+.done-task-text{
+  text-decoration: line-through;
+}
+
+.delete-icon{
+  align-self: center;
+}
