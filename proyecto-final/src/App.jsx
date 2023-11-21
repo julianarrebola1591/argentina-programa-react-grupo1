@@ -7,24 +7,18 @@ function App() {
 
   const [tasks, setTasks] = useState([])
 
+  const deleteTask = (taskId) => {
+    setTasks(tasks.filter(task => task.id != taskId))
+  }
+
   return (
     <section id='task-list'>
-      <TaskList>
+    <h1>LISTA DE TAREAS</h1>
       <TaskForm 
         tasks={tasks}
         setTasks={setTasks}
       />
-      <div className='tasks-container'>
-        {tasks.map(task =>(
-          <TaskItem 
-            id={task.id}
-            key={task.id}
-            name={task.taskName}
-            isDone={task.taskDone}
-          />
-        ))}
-      </div>
-      </TaskList>
+      <TaskList tasks={tasks} deleteTask={deleteTask} />
     </section>
   )
 }

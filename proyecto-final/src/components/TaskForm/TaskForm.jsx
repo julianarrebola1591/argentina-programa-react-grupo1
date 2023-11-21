@@ -5,6 +5,7 @@ const TaskForm = ({tasks, setTasks}) => {
 
   const addTask = () => {
     const text = document.getElementById("frm-task-input").value
+    if (text){
     tasks.push(
       {
         id: tasks.length,
@@ -15,6 +16,7 @@ const TaskForm = ({tasks, setTasks}) => {
     console.log(tasks)
     const newTask = [... tasks]
     setTasks(newTask)
+    }
   }
 
   const addTaskEnter = (e) => {
