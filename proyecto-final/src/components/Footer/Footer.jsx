@@ -11,7 +11,6 @@ const Footer = ({ filter, setFilter, deleteDoneTasks, showAllTasks, showComplete
         <span className={`filter-option all ${filter === "all" ? 'filters-selected' : ''}`} onClick={showAllTasks}>Todas</span>
         <span className={`filter-option completed ${filter === "completed" ? 'filters-selected' : ''}`} onClick={showCompletedTasks}>Completadas</span>
         <span className={`filter-option pending ${filter === "pending" ? 'filters-selected' : ''}`} onClick={showPendingTasks}>Pendientes</span>
-
       </div>
       {/* Colocar este icono a la derecha del todo */}
       <div className='filters-button__delete'>
