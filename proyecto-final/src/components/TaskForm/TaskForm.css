@@ -5,10 +5,52 @@
 
 .frm-button {
   font-size: 16px;
-  padding: 4px;
+  padding: 8px 10px;
+  height: 41px;
   margin-left: 8px;
+  cursor: pointer;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+  outline: none;
 }
 
-#frm-task-input{
-  font-size: 16px;
+.frm-button:hover {
+  background-color: #2980b9;
 }
+
+
+
+/* .frm-button {
+  font-size: 16px;
+  padding: 4px;
+  margin-left: 8px;
+  cursor: pointer;
+} */
+
+.frm-button:hover {
+  opacity: .8;
+}
+
+#frm-task-input {
+  font-size: 16px;
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid #3498db; 
+  outline: none;
+  transition: border-bottom 0.3s; 
+  background-color: #f8f8f8;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+#frm-task-input:focus {
+  border-bottom: 2px solid #e74c3c;
+}
+
+/* #frm-task-input{
+  font-size: 16px;
+} */
+
