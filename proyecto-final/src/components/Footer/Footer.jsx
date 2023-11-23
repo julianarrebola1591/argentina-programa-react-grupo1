@@ -7,14 +7,15 @@ const Footer = ({ filter, setFilter, deleteDoneTasks, showAllTasks, showComplete
     <div className='Footer'>
       {/* Los filtros pegados a la izquierda. Usar .filters-selected para resaltar 
       de un color mas claro el que este seleccionado*/}
-      <div className='filters'>
-        {<span className={filter === "all" ? 'filters-selected' : ''} onClick={showAllTasks}>Todas</span>}
-        {<span className={filter === "completed" ? 'filters-selected' : ''} onClick={showCompletedTasks}>Completadas</span>}
-        {<span className={filter === "pending" ? 'filters-selected' : ''} onClick={showPendingTasks}>Pendientes</span>}
+      <div className='filters-buttons'>
+        <span className={`filter-option all ${filter === "all" ? 'filters-selected' : ''}`} onClick={showAllTasks}>Todas</span>
+        <span className={`filter-option completed ${filter === "completed" ? 'filters-selected' : ''}`} onClick={showCompletedTasks}>Completadas</span>
+        <span className={`filter-option pending ${filter === "pending" ? 'filters-selected' : ''}`} onClick={showPendingTasks}>Pendientes</span>
+
       </div>
       {/* Colocar este icono a la derecha del todo */}
-      <div>
-        <FaTrash id='filter-delete' onClick={deleteDoneTasks}/>
+      <div className='filters-button__delete'>
+        <FaTrash id='filter-delete' onClick={deleteDoneTasks} />
       </div>
     </div>
   )

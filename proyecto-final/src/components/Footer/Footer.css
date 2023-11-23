@@ -1,0 +1,39 @@
+.Footer {
+    display: flex;
+    height: 36px;
+    margin-top: 32px;
+    width: 100%;
+}
+
+.filters-buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 89%;
+    cursor: pointer;
+    
+}
+
+.filter-option {
+    font-size: 14.5px;
+    padding: 3px;
+    border-bottom: 1px solid transparent;
+    transition: border, color .2s;
+}
+
+.filter-option:hover {
+    color: gray;
+    border-bottom: 1px solid gray;
+}
+
+.filters-button__delete{
+    display: grid;
+    place-items: center;
+    margin-left: 5px;
+    transition: color .2s;
+}
+
+.filters-button__delete:hover{
+    color: #943543;
+    cursor: pointer;
+}
