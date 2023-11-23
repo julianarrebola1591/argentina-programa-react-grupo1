@@ -35,15 +35,15 @@ function App() {
   }
 
   const showCompletedTasks = () => {
-    setFilter('all')
+    setFilter('completed')
     const newTasks = [...tasks]
     setTasks(newTasks.filter((task) => task.taskDone === true))
   }
 
   const showPendingTasks = () => {
-    setFilter('all')
+    setFilter('pending')
     const newTasks = [...tasks]
-    setTasks(newTasks.filter((task) => task.taskDone === false))
+    //setTasks(newTasks.filter((task) => task.taskDone === false))
   }
 
   return (
