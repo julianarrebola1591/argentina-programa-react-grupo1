@@ -12,6 +12,16 @@ function App() {
     setTasks(tasks.filter(task => task.id != taskId))
   }
 
+  const updateTaskDone = (taskId) => {
+    const newTasks = [...tasks]
+    const findTask = newTasks.find((task) => task.id === taskId)
+    if (findTask) {
+      findTask.taskDone = !findTask.taskDone
+    }
+
+    setTasks(newTasks)
+  }
+
   return (
     <section id='task-list'>
     <h1>LISTA DE TAREAS</h1>
@@ -19,7 +29,7 @@ function App() {
         tasks={tasks}
         setTasks={setTasks}
       />
-      <TaskList tasks={tasks} deleteTask={deleteTask} />
+      <TaskList tasks={tasks} deleteTask={deleteTask} updateTaskDone={updateTaskDone} />
     </section>
   )
 }
