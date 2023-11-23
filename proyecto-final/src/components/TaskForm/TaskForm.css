@@ -44,6 +44,7 @@
   background-color: #f8f8f8;
   border-radius: 6px;
   margin-bottom: 10px;
+  color: #000;
 }
 
 #frm-task-input:focus {
