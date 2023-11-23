@@ -1,7 +1,7 @@
 import './TaskList.css'
 import TaskItem from '../TaskItem/TaskItem'
 
-const TaskList = ({tasks, task, deleteTask}) => {
+const TaskList = ({tasks, deleteTask}) => {
   return (
     <div>
       <div className='tasks-container'>
