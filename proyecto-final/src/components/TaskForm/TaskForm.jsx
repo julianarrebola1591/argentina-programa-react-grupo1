@@ -13,7 +13,6 @@ const TaskForm = ({tasks, setTasks}) => {
         taskDone: true
       }
     )
-    console.log(tasks)
     const newTask = [... tasks]
     setTasks(newTask)
     }
