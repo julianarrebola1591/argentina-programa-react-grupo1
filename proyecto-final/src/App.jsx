@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-key */
 import { useState } from 'react'
 import './App.css'
-import { TaskList, TaskForm, TaskItem, Footer } from './components'
+import { TaskList, TaskForm, TaskItem } from './components'
 
 function App() {
 
@@ -32,7 +32,6 @@ function App() {
         setTasks={setTasks}
       />
       <TaskList tasks={tasks} deleteTask={deleteTask} updateTaskDone={updateTaskDone} />
-      <Footer filter={filter} setTasks={setTasks} />
     </section>
   )
 }
