@@ -8,7 +8,7 @@ const TaskItem = ({id, name, isDone, deleteTask, updateTaskDone}) => {
     <div className='task-container'>
       {isDone ? <input onClick={() => updateTaskDone(id)} type="checkbox" /> : <input onClick={() => updateTaskDone(id)} type="checkbox" defaultChecked />}
       {<span className={isDone ? '' : 'done-task-text'}>{name}</span>}
-      {<FaDeleteLeft className='delete-icon' onClick={() => deleteTask(id)}/>}
+      {<FaDeleteLeft className='delete-icon' onClick={() => deleteTask(id, isDone)}/>}
     </div>
   )
 }
