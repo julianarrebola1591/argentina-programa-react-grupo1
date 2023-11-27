@@ -1,12 +1,11 @@
-/* eslint-disable react/jsx-key */
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
 import { TaskList, TaskForm, TaskItem, Footer } from './components'
 
 function App() {
 
   const [tasks, setTasks] = useState([])
-  console.log(tasks)
+  const [currentTasks, setCurrentTasks] = useState([])
 
   const [filter, setFilter] = useState('all')
 
@@ -20,9 +19,17 @@ function App() {
     if (findTask) {
       findTask.taskDone = !findTask.taskDone
     }
-
     setTasks(newTasks)
   }
+
+  const addTask =  (newTask) =>{
+    setTasks([...tasks, newTask])
+  }
+
+  useEffect(()=>{
+    console.log('detecte un cambio')
+    setCurrentTasks(tasks)
+  }, [tasks])
 
   const deleteDoneTasks = () => {
     const newTasks = [...tasks]
@@ -46,11 +53,14 @@ function App() {
     //setTasks(newTasks.filter((task) => task.taskDone === false))
   }
 
+  console.log(tasks)
+  console.log(currentTasks)
+
   return (
     <section id='task-list'>
     <h1>LISTA DE TAREAS</h1>
-      <TaskForm tasks={tasks} setTasks={setTasks} />
-      <TaskList tasks={tasks} deleteTask={deleteTask} updateTaskDone={updateTaskDone} />
+      <TaskForm tasks={tasks} addTask={addTask} />
+      <TaskList tasks={currentTasks} deleteTask={deleteTask} updateTaskDone={updateTaskDone} />
       <Footer
       filter={filter} 
       setFilters={setFilter} 

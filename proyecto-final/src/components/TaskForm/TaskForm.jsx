@@ -1,26 +1,22 @@
 import { useEffect, useState } from 'react'
 import './TaskForm.css'
 
-const TaskForm = ({tasks, setTasks}) => {
+const TaskForm = ({addTask, tasks}) => {
 
-  const addTask = () => {
+  const handleAddTask = () => {
     const text = document.getElementById("frm-task-input").value
     if (text){
-    tasks.push(
-      {
+      addTask({
         id: tasks.length,
         taskName: text,
         taskDone: true
-      }
-    )
-    const newTask = [... tasks]
-    setTasks(newTask)
+    })
     }
   }
 
   const addTaskEnter = (e) => {
     if (e.key.toLowerCase() === 'enter') {
-      addTask()
+      handleAddTask()
     }
   }
 
@@ -36,7 +32,7 @@ const TaskForm = ({tasks, setTasks}) => {
         placeholder='Ingrese una tarea' 
         onKeyDown={e => addTaskEnter(e)}
       />
-      <button className='frm-button' onClick={addTask}>Agregar</button>
+      <button className='frm-button' onClick={handleAddTask}>Agregar</button>
     </div>
   )
 }
