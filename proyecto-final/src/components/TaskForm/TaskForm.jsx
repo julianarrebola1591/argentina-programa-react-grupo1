@@ -7,7 +7,7 @@ const TaskForm = ({addTask, tasks}) => {
     const text = document.getElementById("frm-task-input").value
     if (text){
       addTask({
-        id: tasks.length,
+        id: Math.random() + text,
         taskName: text,
         taskDone: true
     })

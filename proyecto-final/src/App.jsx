@@ -38,19 +38,19 @@ function App() {
 
   const showAllTasks = () => {
     setFilter('all')
-    const newTasks = [...tasks]
+    setCurrentTasks(tasks)
   }
 
   const showCompletedTasks = () => {
     setFilter('completed')
     const newTasks = [...tasks]
-    setTasks(newTasks.filter((task) => task.taskDone === true))
+    setCurrentTasks(newTasks.filter((task) => task.taskDone === false))
   }
 
   const showPendingTasks = () => {
     setFilter('pending')
     const newTasks = [...tasks]
-    //setTasks(newTasks.filter((task) => task.taskDone === false))
+    setCurrentTasks(newTasks.filter((task) => task.taskDone === true))
   }
 
   console.log(tasks)

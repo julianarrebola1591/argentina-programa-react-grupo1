@@ -7,16 +7,16 @@
 
 .filters-buttons {
     display: flex;
-    justify-content: space-around;
     align-items: center;
     width: 89%;
     cursor: pointer;
-    
+    font-size: 10px;
 }
 
 .filter-option {
-    font-size: 14.5px;
+    font-size: 11px;
     padding: 3px;
+    margin-right: 6px;
     border-bottom: 1px solid transparent;
     transition: border, color .2s;
 }
@@ -36,4 +36,8 @@
 .filters-button__delete:hover{
     color: #943543;
     cursor: pointer;
+}
+
+.filters-selected{
+    color: rgb(127, 146, 255);
 }

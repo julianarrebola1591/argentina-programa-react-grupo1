@@ -1,3 +1,7 @@
 h1 {
   margin-top: 4px;
 }
+
+.tasks-container{
+  min-height: 120px;
+}
