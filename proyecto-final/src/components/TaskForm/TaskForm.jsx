@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import './TaskForm.css'
 
-const TaskForm = ({addTask, tasks}) => {
+const TaskForm = ({addTask}) => {
 
   const handleAddTask = () => {
     const text = document.getElementById("frm-task-input").value

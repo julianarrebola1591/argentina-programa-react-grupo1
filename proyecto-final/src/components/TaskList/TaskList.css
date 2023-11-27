@@ -3,5 +3,16 @@ h1 {
 }
 
 .tasks-container{
+  margin-top: 10px;
   min-height: 120px;
+}
+
+@keyframes task-popup {
+  from {opacity: 0; transform: translateX(-20px);}
+  to {opacity: 1; transform: translateX(0px);}
+}
+
+.task{
+ animation-name: task-popup;
+ animation-duration: 500ms;
 }

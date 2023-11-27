@@ -8,6 +8,7 @@ const TaskList = ({tasks, deleteTask, updateTaskDone}) => {
     <div>
       <div className='tasks-container'>
         {tasks.map(task =>(
+          <div className='task'>
           <TaskItem 
             id={task.id}
             key={task.id}
@@ -16,6 +17,7 @@ const TaskList = ({tasks, deleteTask, updateTaskDone}) => {
             deleteTask={deleteTask}
             updateTaskDone={updateTaskDone}
           />
+          </div>
         ))}
       </div>
     </div>

@@ -59,7 +59,7 @@ function App() {
   return (
     <section id='task-list'>
     <h1>LISTA DE TAREAS</h1>
-      <TaskForm tasks={tasks} addTask={addTask} />
+      <TaskForm addTask={addTask} />
       <TaskList tasks={currentTasks} deleteTask={deleteTask} updateTaskDone={updateTaskDone} />
       <Footer
       filter={filter} 
